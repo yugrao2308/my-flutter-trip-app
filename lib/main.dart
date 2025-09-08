@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:yourtrip/screens.dart';
+import 'flights_screen.dart'; // Import the new flights screen
 
 void main() {
   runApp(const GoFlutterApp());
@@ -144,42 +145,20 @@ class BookingCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.symmetric(horizontal: 20.0),
+      margin: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
       elevation: 5.0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),
       ),
       child: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                BookingOption(icon: Icons.flight, label: 'Flights'),
-                BookingOption(icon: Icons.hotel, label: 'Hotels'),
-                BookingOption(icon: Icons.train, label: 'Trains'),
-                BookingOption(icon: Icons.directions_car, label: 'Cabs'),
-              ],
-            ),
-            const SizedBox(height: 20.0),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.orange,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30.0),
-                ),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 50.0,
-                  vertical: 15.0,
-                ),
-              ),
-              child: const Text(
-                'Search',
-                style: TextStyle(fontSize: 18.0, color: Colors.white),
-              ),
-            ),
+            BookingOption(icon: Icons.flight, label: 'Flights'),
+            BookingOption(icon: Icons.hotel, label: 'Hotels'),
+            BookingOption(icon: Icons.train, label: 'Trains'),
+            BookingOption(icon: Icons.directions_car, label: 'Cabs'),
           ],
         ),
       ),
@@ -195,12 +174,27 @@ class BookingOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Icon(icon, color: Colors.indigo, size: 30.0),
-        const SizedBox(height: 5.0),
-        Text(label, style: const TextStyle(fontSize: 12.0)),
-      ],
+    return InkWell(
+      onTap: () {
+        if (label == 'Flights') {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const FlightsScreen()),
+          );
+        }
+        // TODO: Add navigation for other options
+      },
+      borderRadius: BorderRadius.circular(8),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Icon(icon, color: Colors.indigo, size: 30.0),
+            const SizedBox(height: 5.0),
+            Text(label, style: const TextStyle(fontSize: 12.0)),
+          ],
+        ),
+      ),
     );
   }
 }

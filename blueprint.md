@@ -18,7 +18,10 @@ GoFlutter is a modern travel booking application inspired by leading platforms l
 
 ## Current Plan
 
-*   **Rebrand the app to "GoFlutter."**
-*   **Redesign the home screen with a booking card and a section for popular destinations.**
-*   **Enhance the category screens with titles and content.**
+*   **Implement Firebase Authentication:**
+    *   Add Firebase Core and Firebase Auth dependencies.
+    *   Create a login screen with email and password fields.
+    *   Implement sign-in and sign-up functionality.
+    *   Add error handling for common authentication errors.
+    *   Create a splash screen to handle the initial authentication state.
 *   **Update the `blueprint.md` file to reflect the changes.**

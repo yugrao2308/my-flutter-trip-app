@@ -5,12 +5,16 @@
   channel = "stable-24.05"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
   packages = [
+    pkgs.flutter
+    pkgs.dart
     pkgs.jdk21
     pkgs.unzip
+    pkgs.google-chrome
   ];
   # Sets environment variables in the workspace
   env = {
     JAVA_HOME = "${pkgs.jdk21.home}";
+    CHROME_EXECUTABLE = "${pkgs.google-chrome}/bin/google-chrome";
   };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
@@ -32,8 +36,7 @@
           manager = "flutter";
         };
         android = {
-          command = ["flutter" "run
-" "--machine" "-d" "android" "-d" "localhost:5555"];
+          command = ["flutter" "run" "--machine" "-d" "android" "-d" "localhost:5555"];
           manager = "flutter";
         };
       };
