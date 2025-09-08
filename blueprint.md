@@ -1,30 +1,24 @@
-# Project Blueprint
+# GoFlutter - Travel Booking App
 
 ## Overview
 
-This is a Flutter application that showcases a modern, responsive, and beautiful UI inspired by popular travel apps like Goibibo and MakeMyTrip. The app, branded as "GoFlutter," will feature a travel booking interface.
+GoFlutter is a modern travel booking application inspired by leading platforms like Goibibo and MakeMyTrip. It provides a clean, intuitive user interface for booking flights, hotels, and other travel services. The app is designed to be both visually appealing and highly functional, offering a seamless user experience from start to finish.
 
 ## Style and Design
 
-*   **Aesthetics**: The app will have a clean, vibrant, and energetic look and feel, using a modern color palette, expressive typography, and engaging iconography.
-*   **Color Scheme**: The primary color will be a vibrant blue, often associated with travel and trust. I'll use a range of hues to create a visually appealing experience.
-*   **Typography**: The app will use the `google_fonts` package to employ modern and readable fonts, with a clear hierarchy for headlines, body text, and other UI elements.
-*   **Iconography**: I will use Material Design icons to create an intuitive and visually consistent navigation experience.
-*   **Components**: The UI will be built with modern Material components, including custom-styled cards for booking, interactive buttons, and a bottom navigation bar.
+*   **Theme:** The app uses a professional and modern theme with a primary color of indigo and a clean, white background. The typography is based on the Poppins font, which is both readable and elegant.
+*   **Layout:** The layout is designed to be intuitive and easy to navigate. The home screen features a prominent booking card for flights and hotels, followed by a grid of popular destinations. The category screens have full-screen background images and clear titles.
+*   **Components:** The app uses a variety of modern UI components, including cards, sliver app bars, and a bottom navigation bar. The booking card has a subtle shadow and rounded corners, and the destination cards have a ripple effect when tapped.
 
 ## Features
 
-*   **Travel Booking UI**: A central card-based UI for booking flights, hotels, and other travel services.
-*   **Bottom Navigation**: An easy-to-use bottom navigation bar for switching between different sections of the app.
-*   **Interactive Elements**: The UI will include interactive elements like text fields for destinations, date pickers, and buttons with clear calls to action.
-*   **Responsive Layout**: The app is designed to be responsive and will adapt to different screen sizes, ensuring a great experience on both mobile and web.
+*   **Home Screen:** The home screen features a booking card with options for flights, hotels, trains, and cabs. It also includes a section for popular destinations, which are displayed in a grid.
+*   **Category Screens:** The app has four category screens: Beach, Mountain, City, and Forest. Each screen has a unique background image and a title that reflects the category.
+*   **Navigation:** The app uses a bottom navigation bar to switch between the home, favorites, and profile screens. The category screens are accessed by tapping on the destination cards on the home screen.
 
-## Current Implementation
+## Current Plan
 
-*   **Project Setup**: The project has been set up with the necessary dependencies, including `google_fonts` and `provider`.
-*   **Basic UI Structure**: The main UI has been implemented with a `Scaffold`, `AppBar`, and a `BottomNavigationBar`.
-*   **Travel Booking Screen**: A `TravelBookingScreen` has been created, featuring a card-based layout for flight booking. This includes text fields for "From" and "To" locations, "Departure Date," and "Travellers."
-*   **Styling**: The app uses the Lato font from `google_fonts` and a blue-based color scheme. The booking card has a modern, rounded-corner design.
-*   **Date Picker**: The "Departure Date" field now opens a date picker when tapped.
-*   **Interactive Traveller Counter**: The "Travellers" field is now an interactive counter with buttons to increment and decrement the number of travellers.
-*   **Cabin Class Dropdown**: A dropdown menu has been added for selecting the cabin class (Economy, Business, First).
+*   **Rebrand the app to "GoFlutter."**
+*   **Redesign the home screen with a booking card and a section for popular destinations.**
+*   **Enhance the category screens with titles and content.**
+*   **Update the `blueprint.md` file to reflect the changes.**
